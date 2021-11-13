@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath PLUS-BRIS-ROBUST-CODE-BEANS-DRF tech_is_me.wsgi --log-file -
