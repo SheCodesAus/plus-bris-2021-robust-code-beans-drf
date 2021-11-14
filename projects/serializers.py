@@ -7,13 +7,15 @@ class ProfileSerializer(serializers.Serializer):
     first_name = serializers.models.TextField()
     photo = serializers.models.URLField()
     gender = serializers.models.TextField() 
-    experience = serializers.models.IntegerField()
+    # experience = serializers.models.IntegerField(3)
     role = serializers.models.TextField()
     company = serializers.models.TextField() 
     facts = serializers.models.CharField(max_length=150)
-    date_created = serializers.models.DateField()
+    # date_created = serializers.models.DateField()
     linkedin = serializers.models.URLField()
     status = serializers.models.TextField()
 
     def create(self, validated_data):
         return Profile.objects.create(**validated_data)
+
+
