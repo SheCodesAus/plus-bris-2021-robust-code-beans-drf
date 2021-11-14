@@ -18,4 +18,17 @@ class ProfileSerializer(serializers.Serializer):
     def create(self, validated_data):
         return Profile.objects.create(**validated_data)
 
+class ProfileDetailSerializer(ProfileSerializer):
+    def update(self, instance, validated_data):
+        instance.bio = validated_data.get('bio',instance.bio)
+        instance.first_name = validated_data.get('first_name',instance.first_name)
+        instance.photo = validated_data.get('photo',instance.photo)
+        instance.gender = validated_data.get('gender',instance.gender)
+        instance.role = validated_data.get('role',instance.role)
+        instance.company = validated_data.get('company',instance.company)
+        instance.facts = validated_data.get('facts',instance.facts)
+        instance.linkedin = validated_data.get('linkedin',instance.linkedin)
+        instance.save()
+        return instance
+
 

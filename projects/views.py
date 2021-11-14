@@ -4,7 +4,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from .models import Profile
-from .serializers import ProfileSerializer
+from .serializers import ProfileDetailSerializer, ProfileSerializer
 
 class ProfileList(APIView):
 
@@ -21,9 +21,32 @@ class ProfileList(APIView):
 
 class ProfileDetail(APIView):
     def get_object(self, pk):
-        return Profile.objects.get(pk=pk)
-
+        try:
+            profile = Profile.objects.get(pk=pk)
+            return profile
+            # return Project.objects.get(pk=pk)
+        except Profile.DoesNotExist:
+            raise Http404
     def get(self, request, pk):
         profile = self.get_object(pk)
-        serializer = ProfileSerializer(profile)
+        serializer = ProfileDetailSerializer(profile)
         return Response(serializer.data)
+# update /profile/<pk>
+    def put(self, request, pk):
+        profile = self.get_object(pk)
+        data = request.data
+        serializer = ProfileDetailSerializer(
+            instance=profile,
+            data=data,
+            partial=True
+        )
+        if serializer.is_valid():
+            serializer.save()
+            return Response(
+                serializer.data,
+                status=status.HTTP_200_OK
+            )
+        return Response(
+            serializer.errors,
+            status=status.HTTP_400_BAD_REQUEST
+        )
