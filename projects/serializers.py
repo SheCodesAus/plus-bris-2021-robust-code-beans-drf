@@ -3,17 +3,17 @@ from.models import Profile
 
 class ProfileSerializer(serializers.Serializer):
     id = serializers.ReadOnlyField()
-    bio = serializers.models.CharField(max_length=250)
-    first_name = serializers.models.TextField()
-    photo = serializers.models.URLField()
-    gender = serializers.models.TextField() 
-    # experience = serializers.models.IntegerField(3)
-    role = serializers.models.TextField()
-    company = serializers.models.TextField() 
-    facts = serializers.models.CharField(max_length=150)
-    # date_created = serializers.models.DateField()
-    linkedin = serializers.models.URLField()
-    status = serializers.models.TextField()
+    bio = serializers.CharField(max_length=250)
+    first_name = serializers.CharField()
+    photo = serializers.URLField()
+    gender = serializers.CharField() 
+    # experience = serializers.IntegerField(3)
+    role = serializers.CharField()
+    company = serializers.CharField() 
+    facts = serializers.CharField(max_length=150)
+    # date_created = serializers.DateField()
+    linkedin = serializers.URLField()
+    status = serializers.CharField()
 
     def create(self, validated_data):
         return Profile.objects.create(**validated_data)
