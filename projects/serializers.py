@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from.models import Profile
 
 class ProfileSerializer(serializers.Serializer):
     id = serializers.ReadOnlyField()
@@ -13,3 +14,6 @@ class ProfileSerializer(serializers.Serializer):
     date_created = serializers.models.DateField()
     linkedin = serializers.models.URLField()
     status = serializers.models.TextField()
+
+    def create(self, validated_data):
+        return Profile.objects.create(**validated_data)
