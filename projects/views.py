@@ -4,7 +4,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from .models import Profile
-from .serializers import ProfileSerializer, ProfileDetailSerializer
+from .serializers import ProfileSerializer
 
 class ProfileList(APIView):
 
@@ -22,7 +22,7 @@ class ProfileList(APIView):
 class ProfileDetail(APIView):
     def get_object(self, pk):
         return Profile.objects.get(pk=pk)
-        
+
     def get(self, request, pk):
         profile = self.get_object(pk)
         serializer = ProfileSerializer(profile)
