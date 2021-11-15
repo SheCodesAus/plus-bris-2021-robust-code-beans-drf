@@ -1,12 +1,12 @@
 from rest_framework import serializers
-from.models import Profile, experience_choices
+from.models import Profile, experience_choices, gender_choices
 
 class ProfileSerializer(serializers.Serializer):
     id = serializers.ReadOnlyField()
     bio = serializers.CharField(max_length=250)
     first_name = serializers.CharField()
     photo = serializers.URLField()
-    gender = serializers.CharField() 
+    gender = serializers.ChoiceField(choices=gender_choices)
     experience = serializers.ChoiceField(choices=experience_choices)
     role = serializers.CharField()
     company = serializers.CharField() 
