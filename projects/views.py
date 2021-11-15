@@ -31,7 +31,8 @@ class ProfileDetail(APIView):
         profile = self.get_object(pk)
         serializer = ProfileDetailSerializer(profile)
         return Response(serializer.data)
-# update /profile/<pk>
+
+# UPDATE /profile/<pk>
     def put(self, request, pk):
         profile = self.get_object(pk)
         data = request.data
@@ -50,3 +51,8 @@ class ProfileDetail(APIView):
             serializer.errors,
             status=status.HTTP_400_BAD_REQUEST
         )
+# DELETE /profile/<pk>
+    def delete(self, request, pk):
+        profile = self.get_object(pk)
+        profile.delete()
+        return Response(dict(message= 'Profile deleted!'))
