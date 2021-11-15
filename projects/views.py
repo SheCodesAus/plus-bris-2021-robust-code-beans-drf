@@ -24,9 +24,9 @@ class ProfileDetail(APIView):
         try:
             profile = Profile.objects.get(pk=pk)
             return profile
-            # return Project.objects.get(pk=pk)
         except Profile.DoesNotExist:
             raise Http404
+
     def get(self, request, pk):
         profile = self.get_object(pk)
         serializer = ProfileDetailSerializer(profile)
