@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.db import models
 
 experience_choices = [('not_set', 'not_set'), ('0-3', '0-3'), ('3-5','3-5'), ('5-7','7-10'), ('10+','10+')]
