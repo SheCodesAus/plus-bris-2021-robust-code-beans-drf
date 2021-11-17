@@ -3,8 +3,8 @@ from.models import Profile, experience_choices, gender_choices
 
 class ProfileSerializer(serializers.Serializer):
     id = serializers.ReadOnlyField()
-    bio = serializers.CharField(max_length=250)
-    first_name = serializers.CharField()
+    bio = serializers.CharField(max_length=300)
+    first_name = serializers.CharField(max_length=250)
     photo = serializers.URLField()
     gender = serializers.ChoiceField(choices=gender_choices)
     experience = serializers.ChoiceField(choices=experience_choices)
