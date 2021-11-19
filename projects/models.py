@@ -31,7 +31,7 @@ class Profile(models.Model):
     linkedin = models.URLField()
     status = models.CharField(
         max_length=50,
-        choices=status_choices,
+        choices=gender_choices,
         default='Pending',
     )
     date_created = models.DateTimeField()
