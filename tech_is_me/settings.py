@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get(
-    'DJANGO_SECRET_KEY','django-insecure-!jx$zrgjkd@pi&kij)tx_=&ox#q%pbo%=r6bn4(5j8#r^qp**s'
+    'DJANGO_SECRET_KEY', 'django-insecure-!jx$zrgjkd@pi&kij)tx_=&ox#q%pbo%=r6bn4(5j8#r^qp**s'
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -37,7 +37,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 INSTALLED_APPS = [
     'rest_framework',
-    # 'rest_framework.authtoken',
+    'rest_framework.authtoken',
     'projects.apps.ProjectsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
