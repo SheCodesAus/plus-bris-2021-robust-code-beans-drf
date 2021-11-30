@@ -10,7 +10,6 @@ gender_choices = [('not_set', 'not_set'), ('Woman', 'Woman'),
 status_choices = [('Pending', 'Pending'), ('Approved',
                                            'Approved'), ('Declined', 'Declined'), ]
 
-# Profile mode
 class Profile(models.Model):
     bio = models.CharField(max_length=300)
     first_name = models.CharField(max_length=250)
