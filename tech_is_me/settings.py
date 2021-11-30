@@ -37,7 +37,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 INSTALLED_APPS = [
     'rest_framework',
-    # 'rest_framework.authtoken',
+    'rest_framework.authtoken',
     'projects.apps.ProjectsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -48,6 +48,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
 ]
+
+# I added this
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        ]
+}
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
@@ -120,7 +127,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Australia/Brisbane'
 
 USE_I18N = True
 
