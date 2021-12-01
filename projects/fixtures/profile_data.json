@@ -2,33 +2,33 @@
   {
     "model": "projects.profile",
     "fields": {
-      "bio": "Melanie raised one of Australia’s largest early stage investment rounds as CEO of Canva. Canva has been growing rapidly since its launch in August 2013 and is now empowering millions of people across from every corner of the globe to create great designs and reach their goals.",
-      "first_name": "ALICE",
+      "bio": "Sara is the Agile Delivery Manager for 2 of BHP's 5 newly created Digital Factories whose aim is to deliver high-quality software at velocity to our customers in the mining operations. As part of her role, Sara leads the ways of working and improvements to how we operate as a department.",
+      "first_name": "Sara",
       "photo": "https://www.clipartmax.com/png/full/223-2236392_female-headshot-placeholder-female-profile-icon-png.png",
       "gender": "Woman",
-      "experience": "3-5",
-      "role": "Tech Manager",
-      "company": "Canva",
+      "experience": "7-9",
+      "role": "Agile Delivery Manager",
+      "company": "BHP",
       "facts": "tbc",
-      "linkedin": "https://www.google.com",
-      "status": "Approved",
-      "date_created": "2021-11-24T01:14:23.382Z"
+      "linkedin": "https://www.linkedin.com/in/sara-borgstr%C3%B6m-02158a61/",
+      "status": "Pending",
+      "date_created": "2021-12-01T01:14:23.382Z"
     }
   },
   {
     "model": "projects.profile",
     "fields": {
-      "bio": "Melanie raised one of Australia’s largest early stage investment rounds as CEO of Canva. Canva has been growing rapidly since its launch in August 2013 and is now empowering millions of people across from every corner of the globe to create great designs and reach their goals.",
-      "first_name": "ALICE",
+      "bio": "Melodie’s strength lies in combining technical proficiency with strong business acumen and evaluating strategic options for critical business decisions. Passionate about emerging technology and trends that have the capability to solve for complex business problems and create a meaningful impact.",
+      "first_name": "Melodie",
       "photo": "https://www.clipartmax.com/png/full/223-2236392_female-headshot-placeholder-female-profile-icon-png.png",
       "gender": "Woman",
-      "experience": "3-5",
-      "role": "Tech Manager",
-      "company": "Canva",
+      "experience": "5-7",
+      "role": "Technology Strategy",
+      "company": "BHP",
       "facts": "tbc",
       "linkedin": "https://www.google.com",
-      "status": "Approved",
-      "date_created": "2021-11-24T01:14:23.382Z"
+      "status": "Pending",
+      "date_created": "2021-12-01T01:14:23.382Z"
     }
   } 
 ]
